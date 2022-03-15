@@ -1,0 +1,16 @@
+namespace School.Utilities;
+
+public enum  TableNames
+{
+    student,
+
+    teacher,
+
+    student_teacher,
+
+    subject,
+
+    student_subject,
+    
+    class_room,
+}
