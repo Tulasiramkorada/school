@@ -34,7 +34,7 @@ public class ClassroomController : ControllerBase
 
     [HttpGet("{classroom_id}")]
 
-    public async Task<ActionResult<StudentDTO>> GetUserById([FromRoute] long classroom_id)
+    public async Task<ActionResult<ClassDTO>> GetUserById([FromRoute] long classroom_id)
     {
         var user = await _classroom.GetById(classroom_id);
 

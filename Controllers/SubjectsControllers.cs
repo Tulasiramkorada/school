@@ -12,9 +12,9 @@ public class SubjectController : ControllerBase
     private readonly ISubjectRepository _subject;
     private readonly ILogger<SubjectController> _logger;
 
-    private readonly  ITeacherRepository _teacher;
+    private readonly ITeacherRepository _teacher;
 
-    public SubjectController(ILogger<SubjectController> logger, ISubjectRepository subject,ITeacherRepository teacher)
+    public SubjectController(ILogger<SubjectController> logger, ISubjectRepository subject, ITeacherRepository teacher)
     {
         _logger = logger;
 
@@ -44,7 +44,7 @@ public class SubjectController : ControllerBase
 
         dto.Teachers = await _teacher.GetList(subject_id);
         return Ok(dto);
-    
+
 
     }
 
